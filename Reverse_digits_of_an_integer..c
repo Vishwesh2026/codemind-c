@@ -1,13 +1,20 @@
+
 #include<stdio.h>
 int main()
 {
-    int x,i;
-    scanf("%d",&x);
-    while(x>0)
+    int n,m=0,i,temp,d;
+    scanf("%d",&n);
+    temp=n;
+    while(n!=0)
     {
-        i=x%10;
-        printf("%d",i);
-        x=x/10;
+        d=n%10;
+        n=n/10;
+        if(d==0)
+        {
+            continue;
+        }
+        m=m*10+d;
     }
-    
+    printf("%d",m);
+    return 0;
 }
