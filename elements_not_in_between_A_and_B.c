@@ -1,17 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,x,y,c=0;
+    int n,arr[100],i,j,a,b,k=0,c=0;
     scanf("%d",&n);
-    int a[n];
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
-    scanf("%d%d",&x,&y);
+    scanf("%d%d",&a,&b);
     for(i=0;i<n;i++)
     {
-        if(a[i]>=x && a[i]<=y)
+        if(arr[i]>=a && arr[i]<=b)
         {
             continue;
         }
@@ -19,7 +18,7 @@ int main()
         
         {
         c++;
-         printf("%d ",a[i]);
+         printf("%d ",arr[i]);
        }
     }
     if(c==0)
