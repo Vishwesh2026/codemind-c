@@ -1,33 +1,32 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,x,y,max=0,c=0;
+    int n,arr[100],i,j,max=0,c=0,a,b;
     scanf("%d",&n);
-    int a[n];
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
-    scanf("%d%d",&x,&y);
+    scanf("%d%d",&a,&b);
     for(i=0;i<n;i++)
     {
-        if(a[i]>max)
+        if(arr[i]>max)
         {
-            max=a[i];
+            max=arr[i];
         }
     }
     for(i=0;i<n;i++)
     {
-        if(a[i]<x || a[i]>y)
+        if(arr[i]<a || arr[i]>b)
         {
-            if(a[i]==max)
+            if(arr[i]==max)
             {
-                printf("%d",a[i]);
+                printf("%d",arr[i]);
             }
         }
-        else if(a[i]>=x && a[i]<=y)
+        else if(arr[i]>=a && arr[i]<=b)
         {
-            if(a[i]==max)
+            if(arr[i]==max)
             {
                 c++;
             }
@@ -37,4 +36,5 @@ int main()
     {
         printf("-1");
     }
+    return 0;
 }
