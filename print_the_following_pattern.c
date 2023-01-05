@@ -2,16 +2,13 @@
 int main()
 {
     int n,i,j;
+    char ch;
     scanf("%d",&n);
-    for(i=n;i>=1;i--)
+    for(i='A';i<=('A'-1)+n;i++)
     {
-        for(j=1;j<=i;j++)
-        {
-            printf("%d",j);
-        }
-        {
-            printf("
+        for(j='A';j<=('A'-1)+n;j++)
+        printf("%c ",i);
+        printf("
 ");
-        }
     }
 }
