@@ -1,34 +1,35 @@
 #include<stdio.h>
 int main()
 {
-    int n,x,y,z,temp,s=0,k=0,i,r=0;
+    int n,k,d,temp,s=0,c=0,i,p=0;
     scanf("%d",&n);
     temp=n;
-    x=n*n;
+    k=n*n;
     while(n!=0)
     {
-        y=n%10;
+        d=n%10;
         n=n/10;
-        s++;
+        c++;
     }
-    for(i=0;i<s;i++)
+    for(i=0;i<c;i++)
     {
-        y=x%10;
-        x=x/10;
-        k=k*10+y;
-    }
-    while(k!=0)
-    {
-        y=k%10;
+        d=k%10;
         k=k/10;
-        r=r*10+y;
+        s=s*10+d;
     }
-    if(r==temp)
+    while(s!=0)
     {
-        printf("Automorphic Number");
-    }
-    else
-    {
-        printf("Not an Automorphic Number");
-    }
+    	d=s%10;
+    	s=s/10;
+    	p=p*10+d;
+	}
+	if(p==temp)
+	{
+		printf("Automorphic Number");
+	}
+	else
+	{
+		printf("Not an Automorphic Number");
+	}
+    return 0;
 }
