@@ -1,23 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int x,y,p,a=0,b=0,n;
+    int n,i,d,k,s=0,p,w=0;
     scanf("%d",&n);
-    x=n*n;
+    k=n*n;
     while(n!=0)
     {
-        p=n%10;
+        d=n%10;
         n=n/10;
-        a=a*10+p;
+        s=s*10+d;
     }
-    y=a*a;
-    while(y!=0)
+    p=s*s;
+    while(p!=0)
     {
-        p=y%10;
-        y=y/10;
-        b=b*10+p;
+        d=p%10;
+        p=p/10;
+        w=w*10+d;
     }
-    if(b==x)
+    if(w==k)
     {
         printf("True");
     }
@@ -25,4 +25,5 @@ int main()
     {
         printf("False");
     }
+    return 0;
 }
