@@ -1,29 +1,31 @@
 #include<stdio.h>
 int main()
 {
-    int x,i,flag=0,sum=0,avg;
-    scanf("%d",&x);
-    int a[x];
-    for(i=0;i<x;i++)
+    int n,arr[100],avg,k=0,i,j=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
-     for(i=0;i<x;i++)
-     {
-         sum=sum+a[i];
-     }
-     avg=sum/x;
-       for(i=0;i<x;i++)
+    for(i=0;i<n;i++)
     {
-    if(avg==a[i])
+        k=k+arr[i];
+    }
+    avg=k/n;
+    for(i=0;i<n;i++)
     {
-        flag=1;
-        break;
+        if(arr[i]==avg)
+        {
+            j++;
+        }
     }
+    if(j==0)
+    {
+        printf("False");
     }
-    if(flag==1)
-    printf("True");
     else
-    printf("False");
-
+    {
+        printf("True");
+    }
+    return 0;
 }
