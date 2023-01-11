@@ -2,20 +2,20 @@
 #include<stdio.h>
 int main()
 {
-    int a[10],i,n,s=0;
+    int n,arr[100],i,j,x=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
     for(i=0;i<n;i++)
     {
-        if(a[i]==0 || a[i]==1)
+        if(arr[i]==0 || arr[i]==1)
         {
-            s++;
+            x++;
         }
     }
-    if(s==n)
+    if(x==n)
     {
         printf("True");
     }
@@ -23,5 +23,5 @@ int main()
     {
         printf("False");
     }
-    
+    return 0;
 }
