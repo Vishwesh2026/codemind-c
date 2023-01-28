@@ -42,8 +42,7 @@ int main()
     else 
     {  
         printf("sunday
-");  
-    }
+");     }
    
     return 0;
 }
